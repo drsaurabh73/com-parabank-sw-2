@@ -64,12 +64,13 @@ public class LoginTest extends BaseTest {
         clickonLogin.click();
         //click on log out button
         //click on logout
-      //  WebElement clickonLogout = driver.findElement(By.xpath("//a[contains(text(),'Log Out')]"));
-        //clickonLogout.click();
+        WebElement clickonLogout = driver.findElement(By.xpath("//a[text()='Log Out']"));
+        clickonLogout.click();
         // check Customer login text
         WebElement actualMessageElement = driver.findElement(By.xpath("//h2[text()='Customer Login']"));
         String acutalMessage = actualMessageElement.getText();
         String expectedMessage = "Customer Login";
+
         Assert.assertEquals("Customer Login", acutalMessage,expectedMessage);
     }
 
